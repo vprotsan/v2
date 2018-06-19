@@ -8,16 +8,19 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Layout from '../../components/Layout';
-import s from './styles.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import classnames from 'classnames'
-// import { title, html } from './index.md';
-import Button from '../../components/Button';
+import s from './styles.css'
+import sglobal from '../../index.global.css'
+
+//fragm & components
+import Layout from '../../components/Layout'
+import Button from '../../components/Button'
 import OverviewMenu from '../../fragments/OverviewMenu'
 import Header from '../../fragments/Header'
 import Logo from '../../fragments/Logo'
+import SubMenu from '../../fragments/SubMenu'
 
 //images
 import ServerlessMovementImage from '../../assets/theserverlessmovement.png'
@@ -38,9 +41,7 @@ class LearnPage extends React.Component {
             <Header />
             <div className="outerWrapper">
               <div className={s.mainImage}>
-                <div className={s.horizSubMenu}>
-
-                </div>
+                <SubMenu horizPos={true}/>
                 <div className={s.mainImageInnerwrapper}>
                     <div>
                         <h1>Why Serverless?</h1>
@@ -51,9 +52,7 @@ class LearnPage extends React.Component {
                         </div>
                     </div>
                     <div>
-                      <div className={s.verticalSubMenu}>
-
-                      </div>
+                      <SubMenu horizPos={false}/>
                     </div>
                 </div>
               </div>
@@ -94,7 +93,7 @@ class LearnPage extends React.Component {
               <section className={s.getStarted}>
                   <div className={s.innerWrapper}>
                     <p>focus on your business logic, not your servers.</p>
-                    {/* <Link to='/#' className={s.btn}>get started</Link> */}
+                    <Link to='/#' className={s.btn}>get started</Link>
                   </div>
               </section>
 
@@ -186,7 +185,19 @@ class LearnPage extends React.Component {
                     <div className={colRight}>
 
                       <div className={s.verticalSubMenu}>
-
+                        <nav>
+                          <ul className={s.submenu}>
+                            <li className={s.link}>
+                              <Link to='/usecases/'>usecases</Link>
+                            </li>
+                            <li className={s.link}>
+                              <Link to='/comparisons/'>comparisons</Link>
+                            </li>
+                            <li className={s.link}>
+                              <Link to='/casestudies/'>casestudies</Link>
+                            </li>
+                          </ul>
+                        </nav>
                       </div>
 
                     </div>
@@ -195,30 +206,26 @@ class LearnPage extends React.Component {
             </div>
             <footer>
               <div className={s.innerWrapper}>
-
+                <Logo />
                 <div className="footerWrapper">
                     <div>
                       <nav>
-
-                        {/* <div>
+                        <div>
                           <p className="menuTitle">developers</p>
                           <ul>
                             <li><Link to='#'>docs</Link></li>
                             <li><Link to="#">quick starts</Link></li>
                             <li><Link to="#">examples & guides</Link></li>
                           </ul>
-                        </div> */}
-
-                        {/* <div>
+                        </div>
+                       <div>
                           <p className="menuTitle">developers</p>
                           <ul>
                             <li><Link to='#'>docs</Link></li>
                             <li><Link to="#">quick starts</Link></li>
                             <li><Link to="#">examples & guides</Link></li>
                           </ul>
-                        </div> */}
-
-
+                        </div>
                       </nav>
                     </div>
                     <div></div>

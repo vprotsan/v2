@@ -1,0 +1,79 @@
+:root {
+  --darkGrey: #272727;
+  --white: #ffffff;
+  --redcolor: #FD5750;
+}
+
+.verticalSubMenu {
+  display: flex;
+
+  & nav {
+    margin: 0 auto;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 280px;
+
+    & li a {
+      display: inline-block;
+      color: var(--white);
+      background: var(--redcolor);
+      line-height: 1;
+      margin-bottom: 30px;
+      padding: 17px 50px;
+      text-decoration: none;
+      text-transform: lowercase;
+      transition: all 0.2s linear;
+      width: 100%;
+      text-align: center;
+
+      &:hover {
+        background: var(--redcolor);
+      }
+    }
+  }
+}
+
+.horizSubMenu {
+  background: var(--darkGrey);
+
+  & nav {
+    /* width: 80%;
+    max-width: 1217px;
+    margin: 0 auto; */
+  }
+
+  & ul {
+      display: flex;
+      list-style: none;
+      border: 1px solid rgba(255,255,255, 0.2);
+      padding: 0;
+      margin: 0;
+      max-width: 440px;
+
+      & li {
+        & a {
+          display: inline-block;
+          color: var(--white);
+          text-decoration: none;
+          padding: 10px 22px;
+          transition: all 0.2s linear;
+
+          &:hover {
+            background: url('../../assets/grey-dotted-grid.svg') no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+}
+
+.linkActive {
+  background: url('../../assets/grey-dotted-grid.svg') no-repeat;
+  background-size: cover;
+}

@@ -40,7 +40,9 @@ export default class Header extends Component{
                 <li className={styles.link}>
                   <Link to='/resources/' className={styles.link}>resources</Link>
                 </li>
-                <li className={styles.link} ref={cta => { this.cta = cta }}>sign up</li>
+                <li className={styles.link} ref={cta => { this.cta = cta }}>
+                  <Link to='/#/' className={styles.link}>sign up</Link>
+                </li>
               </ul>
             </nav>
           </div>

@@ -23,6 +23,8 @@ import history from './core/history';
 let routes = require('./routes.json'); // Loaded with utils/routes-loader.js
 const container = document.getElementById('container');
 
+import './index.global.css';
+
 function renderComponent(component) {
   ReactDOM.render(<Provider store={store}>{component}</Provider>, container);
 }

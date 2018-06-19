@@ -1,42 +1,43 @@
-:local(#header) {
-  background: #272727;
-  color: #ffffff;
+:root {
+  --darkGrey: #272727;
+  --white: #ffffff;
 }
 
-:local(.link) {
-  color: orange;
+#header {
+  background: var(--darkGrey);
+  color: var(--white);
 }
 
-:local(.linkActive){
+.linkActive {
   background: url('../../assets/slash.svg') no-repeat;
 }
 
-:local(.navRight ul){
+.navRight ul {
   display: flex;
   list-style: none;
 }
 
-:local(.link a){
+.link a {
   font-size: 16px;
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 1.9vw;
   text-transform: lowercase;
 }
 
-:local(.link a:hover){
+.link a:hover {
   background: url('../../assets/slash.svg') no-repeat;
 }
 
-:local(.toggle){
+.toggle {
   display: none;
 }
 
-:local(.container){
+.container {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
   width: 80%;
-  max-width: 1115px;
+  max-width: 1217px;
   margin: 0 auto;
 }
