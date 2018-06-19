@@ -1,0 +1,145 @@
+/* $hey: #000000;
+$red: '#FD5750'; */
+
+:local(.mainWrapper){
+  color: #272727;
+}
+
+.mainImage {
+  position: relative;
+}
+
+:local .mainImageInnerwrapper {
+  background: url('../../assets/heroImage.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  padding-top: 115px;
+  padding-bottom: 150px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 280px;
+  }
+}
+
+/* :local(.mainImageInnerwrapper ul){
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 280px;
+} */
+
+:local(.mainImageInnerwrapper ul li a){
+   display: inline-block;
+   color: $red;
+   background: $red;
+   line-height: 1;
+   margin-bottom: 30px;
+   padding: 17px 50px;
+   text-decoration: none;
+   text-transform: lowercase;
+   transition: all 0.2s linear;
+   width: 100%;
+   text-align: center;
+}
+
+
+:local(.mainImageInnerwrapper ul li a:hover){
+  background: $red;
+}
+
+:local(.mainImageInnerwrapper h1){
+  margin-bottom: 62px;
+  font-size: 90px;
+}
+
+:local(.mainImageInnerwrapper p){
+  font-size: 1.6vw;
+  padding-left: 10vw;
+}
+
+:local(.mainImageInnerwrapper div:first-child div:nth-child(2)){
+  padding-right: 10vw;
+}
+
+
+/* vert sub menu */
+:local(.verticalSubMenu){
+  display: flex;
+}
+/* end vert sub menu */
+
+/*  horiz menu */
+.horizSubMenu ul {
+  display: block;
+  list-style: none;
+  display: flex;
+  border: 1px solid rgba(255,255,255, 0.2);
+  padding: 0;
+  margin: 0;
+  max-width: 440px;
+
+  &-li {
+    &-a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 22px;
+      transition: all 0.2s linear;
+    }
+  }
+}
+
+/* :local(.horizSubMenu ul li a){
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 22px;
+  transition: all 0.2s linear;
+} */
+
+:local(.horizSubMenu ul li a:hover) {
+  background: url('../../assets/grey-dotted-grid.svg') no-repeat;
+  background-size: cover;
+}
+
+:local(.linkActive){
+  background: url('../../assets/grey-dotted-grid.svg') no-repeat;
+  background-size: cover;
+}
+
+:local(.horizSubMenu nav ul){
+  display: flex;
+}
+/*  end horiz menu */
+
+/* section */
+
+:local(.theserverlessmovement){
+  display: flex;
+}
+
+:local(.col){
+  width: 50%;
+}
+
+:local(.col p){
+  color: #272727;
+}
+
+
+:local(.innerWrapper){
+  display: flex;
+  max-width: 1115px;
+  margin: 0 auto;
+}
+
+:local(.itemBlock){
+  width: 50%;
+}

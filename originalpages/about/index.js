@@ -12,6 +12,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import s from './styles.css';
 import { title, html } from './index.md';
+import Button from '../../components/Button';
 
 class AboutPage extends React.Component {
 
@@ -24,6 +25,7 @@ class AboutPage extends React.Component {
       <Layout className={s.content}>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Button className={"button"}>Button</Button>
       </Layout>
     );
   }
