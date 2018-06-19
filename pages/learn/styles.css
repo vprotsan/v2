@@ -148,9 +148,14 @@ section {
     }
   }
 
+  &.benefitsOfServFramework,
   &.benefits {
     text-align: center;
     margin-top: 168px;
+
+    & h3 + p {
+      text-align: center;
+    }
 
     & h3 {
       font-size: 3rem;
@@ -167,80 +172,105 @@ section {
     & .innerWrapper {
       flex-wrap: wrap;
       padding-top: 90px;
+    }
 
-      & .col {
-        position: relative;
-        width: 50%;
+    & .col {
+      position: relative;
+      width: 50%;
 
-        & h4, & p {
-          position: relative;
-          text-align: left;
-        }
-
-        & h4 {
-          padding: 20px 0;
-          margin: 0;
-        }
-
-        & img {
-          max-width: 128px;
-        }
+      & h4 {
+        padding: 20px 0;
+        margin: 0;
       }
 
-      & .col:first-child h4::after {
-        position: absolute;
-        top: -16px;
-        left: -29px;
-        display: block;
-        content: '01';
-        color: rgba(253, 87, 80,  0.1);
-        font-size: 7rem;
-      }
-
-      & .col:nth-child(2) h4::after {
-        position: absolute;
-        top: -16px;
-        left: -29px;
-        display: block;
-        content: '02';
-        color: rgba(253, 87, 80,  0.1);
-        font-size: 7rem;
-      }
-
-      & .col:nth-child(3),
-      & .col:nth-child(4) {
-        padding-top: 90px;
-      }
-
-      & .col:nth-child(3),
-      & .col:first-child {
-        padding-right: 12rem;
-      }
-
-      & .col:nth-child(2),
-      & .col:nth-child(4) {
-        padding-left: 12rem;
-      }
-
-      & .col:nth-child(3) h4::after {
-        position: absolute;
-        top: -16px;
-        left: -29px;
-        display: block;
-        content: '03';
-        color: rgba(253, 87, 80,  0.1);
-        font-size: 7rem;
-      }
-
-      & .col:nth-child(4) h4::after {
-        position: absolute;
-        top: -16px;
-        left: -29px;
-        display: block;
-        content: '04';
-        color: rgba(253, 87, 80,  0.1);
-        font-size: 7rem;
+      & img {
+        max-width: 128px;
       }
     }
+
+    & h4, & p {
+      position: relative;
+      text-align: left;
+    }
+
+    & .col:nth-child(3),
+    & .col:nth-child(4) {
+      padding-top: 90px;
+    }
+
+    & .col:nth-child(3),
+    & .col:first-child {
+      padding-right: 12rem;
+    }
+
+    & .col:nth-child(2),
+    & .col:nth-child(4) {
+      padding-left: 12rem;
+    }
+
+    & .col:first-child h4::after {
+      position: absolute;
+      top: -16px;
+      left: -29px;
+      display: block;
+      content: '01';
+      color: rgba(253, 87, 80,  0.1);
+      font-size: 7rem;
+    }
+
+    & .col:nth-child(2) h4::after {
+      position: absolute;
+      top: -16px;
+      left: -29px;
+      display: block;
+      content: '02';
+      color: rgba(253, 87, 80,  0.1);
+      font-size: 7rem;
+    }
+
+    & .col:nth-child(3) h4::after {
+      position: absolute;
+      top: -16px;
+      left: -29px;
+      display: block;
+      content: '03';
+      color: rgba(253, 87, 80,  0.1);
+      font-size: 7rem;
+    }
+
+    & .col:nth-child(4) h4::after {
+      position: absolute;
+      top: -16px;
+      left: -29px;
+      display: block;
+      content: '04';
+      color: rgba(253, 87, 80,  0.1);
+      font-size: 7rem;
+    }
+
   }
+
+  &.theserverlessFramework {
+    margin-top: 200px;
+
+    & img {
+      max-width: 200%;
+      position: relative;
+      top: -50%;
+      left: -50%;
+      transform: translateY(36%);
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+}
+
+.glitch {
+  background: url('../../assets/glitchdivider.svg') no-repeat;
+  background-size: cover;
+  height: 160px;
+  width: 100%;
+  margin: 180px 0 200px;
 }

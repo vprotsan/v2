@@ -128,10 +128,12 @@ class LearnPage extends React.Component {
                   </div>
               </section>
 
+              <div className={s.glitch}></div>
+
               <section className={s.theserverlessFramework}>
                 <div className={s.innerWrapper}>
                     <div className={colLeft}>
-                      <h2>The Serverless Framework</h2>
+                      <h2>The Serverless <br/>Framework</h2>
                       <p>If the Serverless Application is the new and improved application house on the block, then the Serverless Framework is the door you use to enter that house.</p>
                       <p>Serverless Applications are the next step in cloud-native development, and they require automation. If you're tying together multiple managed services and functions, you cannot rely on a checklist of manual steps. You should be able to recreate your entire application with a command.</p>
                       <p>That is where the Serverless Framework comes in. Use the Serverless Framework CLI to build and deploy your application to any and every cloud provider with a consistent experience. The Framework automatically configures cloud vendor settings for you, based on the language you use and the cloud provider you deploy to.</p>
@@ -149,25 +151,25 @@ class LearnPage extends React.Component {
                   <p>These are the 4 core benefits of Serverless Applications you should know about</p>
                   <div className={s.innerWrapper}>
 
-                      <div className={s.itemBlock}>
-                        <img src={ZeroAdministration} alt="Zero administration"/>
-                        <h4>Zero administration</h4>
-                        <p>Deploy code without provisioning anything beforehand, or managing anything afterward. There is no concept of a fleet, an instance, or even an operating system. No more bothering the Ops department.</p>
+                      <div className={s.col}>
+                        <img src={ZeroAdministration} alt="Increase development speed"/>
+                        <h4>Increase development speed</h4>
+                        <p>The Serverless Framework CLI enables developers to build, test, and deploy all in the same environment. Developers write their functions in cloud-agnostic Serverless YAML, and services can be deployed with a single command. Transactionally deploy code to multiple providers, version your deployments, and roll back the deployment if necessary.</p>
                       </div>
 
-                      <div className={s.itemBlock}>
-                        <img src={AutoScaling} alt="Auto-scaling"/>
-                        <h4>Auto-scaling</h4>
-                        <p>Let your service providers manage the scaling challenges. No need to fire alerts or write scripts to scale up and down. Handle quick bursts of traffic and weekend lulls the same way -- with peace of mind.</p>
+                      <div className={s.col}>
+                        <img src={AutoScaling} alt="Avoid vendor lock-in"/>
+                        <h4>Avoid vendor lock-in</h4>
+                        <p>Different cloud providers all have different required formats and deployment methods. The Framework assembles your application into a single package that can be deployed across any cloud provider, abstracting away any necessary tweaking.</p>
                       </div>
 
-                      <div className={s.itemBlock}>
+                      <div className={s.col}>
                         <img src={PayPerUse} alt="Pay per use"/>
                         <h4>Pay-per-use</h4>
                         <p>Function-as-a-service compute and managed services charged based on usage rather than pre-provisioned capacity. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.</p>
                       </div>
 
-                      <div className={s.itemBlock}>
+                      <div className={s.col}>
                         <img src={IncreasedVelocity} alt="Increased velocity"/>
                         <h4>Increased velocity</h4>
                         <p>Shorten the loop between having an idea and deploying to production. Because there's less to provision up front and less to manage after deployment, smaller teams can ship more features. It's easier than ever to make your idea live.</p>
