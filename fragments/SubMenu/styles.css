@@ -7,6 +7,17 @@
 .verticalSubMenu {
   display: flex;
 
+  &.red {
+    & ul {
+      margin-top: 50%;
+
+      & li a {
+        background: none;
+        border: 1px solid var(--white);
+      }
+    }
+  }
+
   & nav {
     margin: 0 auto;
   }

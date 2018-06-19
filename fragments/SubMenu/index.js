@@ -6,9 +6,10 @@ import s from './styles.css';
 const SubMenu = (props) => {
 
     const MenuClass = props.horizPos ? s.horizSubMenu : s.verticalSubMenu
+    const secondClass = props.appliedClass == 'red' ? s.red : null
 
     return (
-      <div className={MenuClass}>
+      <div className={MenuClass + " " + secondClass}>
         <nav>
           <ul>
             <li className={s.link}>

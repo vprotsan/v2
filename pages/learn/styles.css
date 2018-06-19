@@ -267,6 +267,45 @@ section {
   }
 }
 
+.nextStep {
+  margin-top: 200px;
+
+  & h2, & p {
+    color: #ffffff;
+  }
+
+  & h2::after {
+    top: -62px;
+    left: -101px;
+    width: 152px;
+    height: 128px;
+    background: url('../../assets/dotgrid-red.png') no-repeat;
+  }
+
+  & .innerWrapper {
+    background: #FD5750;
+    /* padding: 105px; */
+
+    & > div:first-child {
+      /* padding-right: 10vw; */
+      padding: 105px;
+
+      & p {
+        color: #ffffff;
+      }
+    }
+
+    & > div:nth-child(2) {
+      display: flex;
+      background: url('../../assets/glitch-screen.png') no-repeat;
+
+      & div {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 .glitch {
   background: url('../../assets/glitchdivider.svg') no-repeat;
   background-size: cover;

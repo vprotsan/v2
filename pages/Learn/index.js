@@ -30,6 +30,10 @@ import ZeroAdministration from '../../assets/zeroAdministration.svg'
 import AutoScaling from '../../assets/AutoScaling.svg'
 import PayPerUse from '../../assets/payperuse.svg'
 import IncreasedVelocity from '../../assets/increasedvelocity.svg'
+import IncreaseDevSpeed from '../../assets/increaseddevspeed.svg'
+import vendorlockin from  '../../assets/avoidvendor.svg'
+import Infrastructure from '../../assets/infrastructure.svg'
+import Ecosystem from '../../assets/ecosystem.svg'
 
 class LearnPage extends React.Component {
   render() {
@@ -152,27 +156,27 @@ class LearnPage extends React.Component {
                   <div className={s.innerWrapper}>
 
                       <div className={s.col}>
-                        <img src={ZeroAdministration} alt="Increase development speed"/>
+                        <img src={IncreaseDevSpeed} alt="Increase development speed"/>
                         <h4>Increase development speed</h4>
                         <p>The Serverless Framework CLI enables developers to build, test, and deploy all in the same environment. Developers write their functions in cloud-agnostic Serverless YAML, and services can be deployed with a single command. Transactionally deploy code to multiple providers, version your deployments, and roll back the deployment if necessary.</p>
                       </div>
 
                       <div className={s.col}>
-                        <img src={AutoScaling} alt="Avoid vendor lock-in"/>
+                        <img src={vendorlockin} alt="Avoid vendor lock-in"/>
                         <h4>Avoid vendor lock-in</h4>
                         <p>Different cloud providers all have different required formats and deployment methods. The Framework assembles your application into a single package that can be deployed across any cloud provider, abstracting away any necessary tweaking.</p>
                       </div>
 
                       <div className={s.col}>
-                        <img src={PayPerUse} alt="Pay per use"/>
-                        <h4>Pay-per-use</h4>
-                        <p>Function-as-a-service compute and managed services charged based on usage rather than pre-provisioned capacity. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.</p>
+                        <img src={Infrastructure} alt="Infrastructure as Code"/>
+                        <h4>Infrastructure as Code</h4>
+                        <p>Configure infrastructure across multiple clouds. Serverless cleanly integrates with every Serverless Compute Service so that you can formalize and standardize your entire infrastructure as code.</p>
                       </div>
 
                       <div className={s.col}>
-                        <img src={IncreasedVelocity} alt="Increased velocity"/>
-                        <h4>Increased velocity</h4>
-                        <p>Shorten the loop between having an idea and deploying to production. Because there's less to provision up front and less to manage after deployment, smaller teams can ship more features. It's easier than ever to make your idea live.</p>
+                        <img src={Ecosystem} alt="Existing ecosystem"/>
+                        <h4>Existing ecosystem</h4>
+                        <p>The Serverless Framework is pluggable, and many dozens of community-contributed plugins exist in our GitHub Plugins repo. The Serverless Framework is widely adopted, meaning there are always active discussions on forums and there are a wide array of tutorials that will help you get started.</p>
                       </div>
                   </div>
               </section>
@@ -180,34 +184,19 @@ class LearnPage extends React.Component {
               <section className={s.nextStep}>
                 <div className={s.innerWrapper}>
                     <div className={colLeft}>
-                      <h5>Next steps</h5>
+                      <h2>Next steps</h2>
                       <p>Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</p>
                       <p>Or if you’re ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</p>
                     </div>
 
                     <div className={colRight}>
-
-                      <div className={s.verticalSubMenu}>
-                        <nav>
-                          <ul className={s.submenu}>
-                            <li className={s.link}>
-                              <Link to='/usecases/'>usecases</Link>
-                            </li>
-                            <li className={s.link}>
-                              <Link to='/comparisons/'>comparisons</Link>
-                            </li>
-                            <li className={s.link}>
-                              <Link to='/casestudies/'>casestudies</Link>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
-
+                      <SubMenu horizPos={false} appliedClass={'red'}/>
                     </div>
                 </div>
               </section>
             </div>
-            <footer>
+            {/*  make a conponent */}
+            {/* <footer>
               <div className={s.innerWrapper}>
                 <Logo />
                 <div className="footerWrapper">
@@ -234,7 +223,7 @@ class LearnPage extends React.Component {
                     <div></div>
                 </div>
               </div>
-            </footer>
+            </footer> */}
          </div>
        </Router>
     );
