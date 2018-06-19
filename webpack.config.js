@@ -88,15 +88,24 @@ const config = {
   module: {
     loaders: [
       {
+        // test: /\.js?$/,
+        // include: [
+        //   path.resolve(__dirname, './actions'),
+        //   path.resolve(__dirname, './components'),
+        //   path.resolve(__dirname, './core'),
+        //   path.resolve(__dirname, './pages'),
+        //   path.resolve(__dirname, './main.js'),
+        // ],
+        // loader: `babel-loader?${JSON.stringify(babelConfig)}`,
+        // query: {
+        //     presets: ['es2015']
+        // }
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, './actions'),
-          path.resolve(__dirname, './components'),
-          path.resolve(__dirname, './core'),
-          path.resolve(__dirname, './pages'),
-          path.resolve(__dirname, './main.js'),
-        ],
-        loader: `babel-loader?${JSON.stringify(babelConfig)}`,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+            presets: ['es2015', 'react', "stage-1"]
+        }
       },
       {
         test: /\.css$/,

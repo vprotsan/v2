@@ -1,8 +1,12 @@
-/* $hey: #000000;
-$red: '#FD5750'; */
+
+:root {
+  --white: #ffffff;
+  --redcolor: #FD5750;
+  --textColor: #272727;
+}
 
 :local(.mainWrapper){
-  color: #272727;
+  color: var(--textColor);
 }
 
 .mainImage {
@@ -37,8 +41,8 @@ $red: '#FD5750'; */
 
 :local(.mainImageInnerwrapper ul li a){
    display: inline-block;
-   color: $red;
-   background: $red;
+   color: var(--white);
+   background: var(--redcolor);
    line-height: 1;
    margin-bottom: 30px;
    padding: 17px 50px;
@@ -51,7 +55,7 @@ $red: '#FD5750'; */
 
 
 :local(.mainImageInnerwrapper ul li a:hover){
-  background: $red;
+  background: var(--redcolor);
 }
 
 :local(.mainImageInnerwrapper h1){

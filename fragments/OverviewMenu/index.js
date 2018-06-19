@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router-dom'
-import styles from './OverviewMenu.css'
-import classnames from 'classnames'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './OverviewMenu.css';
+import classnames from 'classnames';
 
 
 export default class OverviewMenu extends Component{

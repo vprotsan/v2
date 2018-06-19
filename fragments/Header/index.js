@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router-dom'
-import handleClickAway from '../../utils/handleClickAway'
+// import handleClickAway from '../../utils/handleClickAway'
 import Logo from '../Logo'
 import styles from './Header.css'
 import classnames from 'classnames'
