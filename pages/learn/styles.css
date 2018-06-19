@@ -3,6 +3,7 @@
   --white: #ffffff;
   --redcolor: #FD5750;
   --textColor: #272727;
+  --lightgrey: #8C8C8C;
 }
 
 .mainWrapper {
@@ -59,14 +60,6 @@
   display: flex;
 }
 
-.col {
-  width: 50%;
-
-  p {
-    color: var(--textColor);
-  }
-}
-
 .innerWrapper {
   display: flex;
   width: 80%;
@@ -97,7 +90,157 @@ section {
     height: 38px;
   }
 
-  &.theserverlessmovement {
+  &.theserverlessmovement,
+  &.whatMakesServerless {
     padding-top: 242px;
+
+    & img {
+      max-width: 200%;
+      position: relative;
+      top: -50%;
+      left: -50%;
+      transform: translateY(26%);
+    }
+  }
+
+  &.whatMakesServerless {
+    padding-top: 0;
+    margin-top: -35px;
+
+    & img {
+      top: -50%;
+      left: -50%;
+      transform: translateY(32%);
+    }
+  }
+
+  &.getStarted {
+
+    & .innerWrapper {
+      display: block;
+      background: url('../../assets/cta-bg.png') no-repeat;
+      background-size: cover;
+      text-align: center;
+      padding: 60px 0 76px;
+
+      & p {
+        font-size: 3.5rem;
+        line-height: 1;
+        color: var(--white);
+        text-align: center;
+      }
+
+      & a {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  & .col {
+    width: 50%;
+
+    & img {
+      display: block;
+    }
+
+    & p {
+      color: var(--textColor);
+    }
+  }
+
+  &.benefits {
+    text-align: center;
+    margin-top: 168px;
+
+    & h3 {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    & p {
+      color: var(--lightgrey);
+      font-size: 1.2rem;
+    }
+
+    & .innerWrapper {
+      flex-wrap: wrap;
+      padding-top: 90px;
+
+      & .col {
+        position: relative;
+        width: 50%;
+
+        & h4, & p {
+          position: relative;
+          text-align: left;
+        }
+
+        & h4 {
+          padding: 20px 0;
+          margin: 0;
+        }
+
+        & img {
+          max-width: 128px;
+        }
+      }
+
+      & .col:first-child h4::after {
+        position: absolute;
+        top: -16px;
+        left: -29px;
+        display: block;
+        content: '01';
+        color: rgba(253, 87, 80,  0.1);
+        font-size: 7rem;
+      }
+
+      & .col:nth-child(2) h4::after {
+        position: absolute;
+        top: -16px;
+        left: -29px;
+        display: block;
+        content: '02';
+        color: rgba(253, 87, 80,  0.1);
+        font-size: 7rem;
+      }
+
+      & .col:nth-child(3),
+      & .col:nth-child(4) {
+        padding-top: 90px;
+      }
+
+      & .col:nth-child(3),
+      & .col:first-child {
+        padding-right: 12rem;
+      }
+
+      & .col:nth-child(2),
+      & .col:nth-child(4) {
+        padding-left: 12rem;
+      }
+
+      & .col:nth-child(3) h4::after {
+        position: absolute;
+        top: -16px;
+        left: -29px;
+        display: block;
+        content: '03';
+        color: rgba(253, 87, 80,  0.1);
+        font-size: 7rem;
+      }
+
+      & .col:nth-child(4) h4::after {
+        position: absolute;
+        top: -16px;
+        left: -29px;
+        display: block;
+        content: '04';
+        color: rgba(253, 87, 80,  0.1);
+        font-size: 7rem;
+      }
+    }
   }
 }

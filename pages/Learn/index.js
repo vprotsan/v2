@@ -21,9 +21,11 @@ import OverviewMenu from '../../fragments/OverviewMenu'
 import Header from '../../fragments/Header'
 import Logo from '../../fragments/Logo'
 import SubMenu from '../../fragments/SubMenu'
+import Btn from '../../fragments/Btn'
 
 //images
 import ServerlessMovementImage from '../../assets/theserverlessmovement.png'
+import WhatmakesAnApplication from '../../assets/whatmakesanapplication.png'
 import ZeroAdministration from '../../assets/zeroAdministration.svg'
 import AutoScaling from '../../assets/AutoScaling.svg'
 import PayPerUse from '../../assets/payperuse.svg'
@@ -76,15 +78,14 @@ class LearnPage extends React.Component {
               <section className={s.whatMakesServerless}>
                   <div className={s.innerWrapper}>
                     <div className={colLeft}>
-                      <img src={ServerlessMovementImage} alt="The Serverless Movement" />
+                      <img src={WhatmakesAnApplication} alt="What makes an application serverless?" />
                     </div>
                     <div className={colRight}>
-                      <h2>The Serverless Movement</h2>
-                      <p>Serverless has become a movement about developer empowerment. As a technology, it abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.</p>
+                      <h2>What makes an application serverless?</h2>
+                      <p>The serverless movement started with the release of AWS Lambda, a Function-as-a-Service (FaaS) compute service. But serverless is much more than just FaaS.</p>
+                      <p>Ultimately, serverless is about focusing your efforts on what provides value to your users. This means using managed services for databases, search indexes, queues, SMS messaging, and email delivery. It means tying these services together using stateless, ephemeral compute like the various FaaS offerings.</p>
+                      <p>Upgrading your Linux distro does not provide value to your users. Managing your RabbitMQ servers does not provide value to your users. Shipping product provides value to your users.</p>
 
-                      <p>What this means is that you, the developer, can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. You don't have to provision servers, or pay for resources that go unused.</p>
-
-                      <p>The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.</p>
                     </div>
 
                   </div>
@@ -93,7 +94,7 @@ class LearnPage extends React.Component {
               <section className={s.getStarted}>
                   <div className={s.innerWrapper}>
                     <p>focus on your business logic, not your servers.</p>
-                    <Link to='/#' className={s.btn}>get started</Link>
+                    <Btn to={'#'} btnClassType={'white'} text={'get started'}/>
                   </div>
               </section>
 
@@ -101,25 +102,25 @@ class LearnPage extends React.Component {
                   <h3>Benefits of Serverless Applications</h3>
                   <p>These are the 4 core benefits of Serverless Applications you should know about</p>
                   <div className={s.innerWrapper}>
-                      <div>
+                      <div className={s.col}>
                         <img src={ZeroAdministration} alt="Zero administration"/>
                         <h4>Zero administration</h4>
                         <p>Deploy code without provisioning anything beforehand, or managing anything afterward. There is no concept of a fleet, an instance, or even an operating system. No more bothering the Ops department.</p>
                       </div>
 
-                      <div>
+                      <div className={s.col}>
                         <img src={AutoScaling} alt="Auto-scaling"/>
                         <h4>Auto-scaling</h4>
                         <p>Let your service providers manage the scaling challenges. No need to fire alerts or write scripts to scale up and down. Handle quick bursts of traffic and weekend lulls the same way -- with peace of mind.</p>
                       </div>
 
-                      <div>
+                      <div className={s.col}>
                         <img src={PayPerUse} alt="Pay per use"/>
                         <h4>Pay-per-use</h4>
                         <p>Function-as-a-service compute and managed services charged based on usage rather than pre-provisioned capacity. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.</p>
                       </div>
 
-                      <div>
+                      <div className={s.col}>
                         <img src={IncreasedVelocity} alt="Increased velocity"/>
                         <h4>Increased velocity</h4>
                         <p>Shorten the loop between having an idea and deploying to production. Because there's less to provision up front and less to manage after deployment, smaller teams can ship more features. It's easier than ever to make your idea live.</p>
